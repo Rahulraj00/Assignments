@@ -56,51 +56,13 @@
 	\tableofcontents
 \vspace{5mm}
    \section{Problem}
-\paragraph{ If diagonals of a parallelogram are equal then show that it is a rectangle }
-   \section{Solution}
-   \textbf{Theory:}\\
-
-   Given  ABCD is a parallelogram and AC = BD \\ 
-
-\textbf{To Prove:} It is a rectangle.\\
-Rectange is a parallelogram with all its interior angles as 90 degrees. As given all diagonals are equall so if we prove anyone angle in the triangle is 90 then it will automatically become rectangle.\\
-\\
-In $\Delta$ ABC and $\angle$ DCB   \\
-AB = DC (opposite sides of parallelogram are equal) \\
-\\
- BC = BC (Common)\\
-   \\
-   AC = DB (Given)\\
- \\ 
-$\triangle ABC$ $\cong$ $\triangle DCB$ are congruent to each other by SSS congruency.  \\
- \\ 
- therefore $\angle$ ABC = $\angle$ DCB (CPCT)\\
- \\
- \\
-Now,
- %\vspace{10mm}
- AB $\parallel$ BC \\
- \\
- And BC is a transversal
- Therefore $\angle$ B + $\angle$ C = 180 $\deg$(interior angles on the same side of transversal are supplementary)\\
- \\
- $\angle$B + $\angle$B = 180 $/deg$\\
- \\
-  2$\angle$B = 180 $\deg$\\
- \\
- $\angle$B = 90 $\deg$\\
- AD=DC \\
- 
- Therefore $\angle$ DAC= $\angle$ DCA\\
- 
-\vspace{1mm}
-\textbf{Termux commands :}
-\begin{lstlisting}
-python3 matrixline.py
-\end{lstlisting}
-
-
-The input parameters for this construction are 
+\textbf{ If diagonals of a parallelogram are equal then show that it is a rectangle }
+ \section{Construction}
+ 	\begin{center}
+     Figure of Construction
+     \includegraphics[scale=0.5]{fig.png}
+  	\end{center}
+  	The input parameters for this construction are 
 \begin{center}
 \begin{tabular}{|c|c|c|}
 	\hline
@@ -116,52 +78,52 @@ The input parameters for this construction are
 	\begin{pmatrix}
 		0 \\
 		0 \\
-	\end{pmatrix}$%
+	\end{pmatrix}$
 	&Point A\\
 	\hline
 	
 \end{tabular}
 \end{center}
-\vspace{.25 cm}
-\textbf{To Prove:}\\ 
-ABCD is a rectangle\\
-\\
-Given
-\begin{align}
- \vec{AC} = \vec{BD} 
-\end{align}
-By Triangle law of vector addition
-\begin{align}
-\vec{AC} = \vec{AD} + \vec{DC}\\
-= \vec{AD-CD} \\
- = \vec{BC} - \vec{CD}\\
-\vec{BD} = \vec{BC} + \vec{CD}\\
-\end{align}
-\begin{align}
- \vec{a1} = \vec{C} - \vec{B}\\
- \vec{a2} = \vec{C} - \vec{D}
-	\end{align}
-	%a1=A-B\\
-	%a2=A-D\\
-	
-`Angle between vectors a1,a2 is given by \\
-\begin{align}
-\cos \theta =\frac{\mathbf{(D-C)}^T  \mathbf{(C-B)}}{\norm{\vec{(B-C)}}\norm{\vec{(C-D)}}}
-	\end{align}
-\vspace{3mm}\\
-\begin{align}
-cos\theta = 0\\
-\theta = 90\deg
-\end{align}
-$\therefore$ It is a rectangle\\
 
- \section{Construction}
- 	\begin{center}
-     Figure of Construction
-     \includegraphics[scale=0.5]{fig.png}
-  	\end{center}
-  	\vspace{1mm}
-The below python code realizes the above construction:	\\
+   \section{Solution}
+
+\vspace{1mm}
+\textbf{Termux commands :}
+\begin{lstlisting}
+python3 matrixline.py
+\end{lstlisting}
+
+
+\vspace{.25 cm}
+\textbf{To Prove:}
+ABCD is a rectangle
+
+ Given:
+ ABCD is a parallelogram
+\begin{align}
+ \vec{B} - \vec{A}= \vec{D}-\vec{C}\
+	\end{align}
+	We can wirte this as
+\begin{align}
+ \vec{A} - \vec{C}= \vec{B}-\vec{D}\
+	\end{align}
+		
+	And, Diagonals of the parallelogram are equal.
+\begin{align}
+ \vec{C} - \vec{A}= \vec{D}-\vec{B}\
+	\end{align}
+	If we take a point on the intersection of diagonals then we can write
+\begin{align}
+ \norm{O-D} = \norm{O-C} = \norm{O-B} = \norm{O-A}
+	\end{align}
+		
+Then we can say that diagonals bisect each other.
+
+
+$\therefore$ It is a rectangle
+
+\vspace{1mm}
+The below python code realizes the above construction:	
 \url{https://github.com/Rahulraj00/Assignments/tree/main/Assignments/assg_4}
 \bibliographystyle{ieeetr}
 \end{document}
