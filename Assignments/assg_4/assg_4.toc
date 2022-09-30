@@ -1,4 +1,0 @@
-\contentsline {section}{\numberline {1}Problem}{1}{section.1}%
-\contentsline {paragraph}{ If diagonals of a parallelogram are equal then show that it is a rectangle }{1}{section.1}%
-\contentsline {section}{\numberline {2}Solution}{1}{section.2}%
-\contentsline {section}{\numberline {3}Construction}{2}{section.3}%
