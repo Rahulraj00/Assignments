@@ -101,30 +101,41 @@ ABCD is a rectangle
  Given:
  ABCD is a parallelogram
 \begin{align}
- \vec{B} - \vec{A}= \vec{D}-\vec{C}\
+ \vec{B} - \vec{A}= \vec{C}-\vec{D}\
 	\end{align}
-	We can wirte this as
-\begin{align}
- \vec{A} - \vec{C}= \vec{B}-\vec{D}\
-	\end{align}
-		
 	And, Diagonals of the parallelogram are equal.
 \begin{align}
- \vec{C} - \vec{A}= \vec{D}-\vec{B}\
+ \norm{\vec{C} - \vec{A}}^2= \norm{\vec{D}-\vec{B}}^2\
 	\end{align}
-	If we take a point on the intersection of diagonals then we can write
+ 	Now, we should prove that its a rectangle i.e
 \begin{align}
- \norm{O-D} = \norm{O-C} = \norm{O-B} = \norm{O-A}
-\end{align}	
-Then we can say that diagonals bisect each other.
-And, 
+ \theta = 90
+\end{align} 	
  \begin{align}
- \cos \theta_1 =\frac{\mathbf{(B-A)}^T  \mathbf{(A-D)}}{\norm{\vec{(B-A)}}\norm{\vec{(A-D)}}}
+ \cos \theta_1 =\frac{\mathbf{(A-B)}^T  \mathbf{(B-C)}}{\norm{\vec{(A-B)}}\norm{\vec{(B-C)}}}
  \end{align}
 \begin{align}
-\brak{\vec{B}-\vec{A}}^T
-\brak{\vec{A}-\vec{D}} = 0
+\brak{\vec{A}-\vec{B}}^T
+\brak{\vec{B}-\vec{C}} = 0
 \\
+\end{align}
+from equation (2) 
+\begin{align*}
+ \norm{\vec{C} - \vec{A}}^2= \norm{\vec{D}-\vec{B}}^2\\
+ \norm{{(\vec{A-B}) + (\vec{B-C})}}^2 = \norm{{(\vec{A-B}) + (\vec{B-C})}}^2\\
+\end{align*}
+After resolving the above equation 
+\begin{align}
+2(\vec{A}-\vec{B})^T (\vec{B}-\vec{C})=2(\vec{C}-\vec{D})^T (\vec{B}-\vec{C}) 
+\end{align}
+according to parallelogram theorem, we can write C - D =-(A - B)
+\begin{align}
+2(\vec{A}-\vec{B})^T (\vec{B}-\vec{C})=-2(\vec{A}-\vec{B})^T (\vec{B}-\vec{C}) \\
+2(\vec{A}-\vec{B})^T (\vec{B}-\vec{C})+2(\vec{A}-\vec{B})^T (\vec{B}-\vec{C}) =0 \\
+2(\vec{A}-\vec{B})^T (\vec{B}-\vec{C})=0\\
+(\vec{A}-\vec{B})^T (\vec{B}-\vec{C})=0
+\end{align}
+\begin{align}
 \implies cos\theta = 0\\
 \theta = 90
 \end{align}
